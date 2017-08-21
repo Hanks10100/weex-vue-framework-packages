@@ -41,14 +41,14 @@ exec([
   `cp -r node_modules/weex-vue-framework/ ${filePath}/v${targetVersion}`,
 ])
 
-// if (isLatest) {
-//   exec([
-//     `cp node_modules/weex-vue-framework/index.js ${filePath}/index.js`,
-//     `cp node_modules/weex-vue-framework/index.min.js ${filePath}/index.min.js`,
-//     `cp node_modules/weex-vue-framework/index.js index.js`,
-//     `cp node_modules/weex-vue-framework/index.min.js index.min.js`
-//   ])
-// }
+if (isLatest) {
+  exec([
+    `cp node_modules/weex-vue-framework/index.js ${filePath}/index.js`,
+    `cp node_modules/weex-vue-framework/factory.js ${filePath}/factory.js`,
+    `cp node_modules/weex-vue-framework/index.js index.js`,
+    `cp node_modules/weex-vue-framework/factory.js factory.js`
+  ])
+}
 
 exec([
   `git add -A`,
