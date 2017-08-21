@@ -37,8 +37,8 @@ if (!fs.existsSync(filePath)) {
 }
 
 exec([
-  `cp -r node_modules/weex-vue-framework ${filePath}/v${targetVersion}`,
-  `cp -r node_modules/weex-vue-framework ${filePath}/v${targetVersion}`,
+  `cp -r node_modules/weex-vue-framework/ ${filePath}/v${targetVersion}`,
+  `cp -r node_modules/weex-vue-framework/ ${filePath}/v${targetVersion}`,
 ])
 
 // if (isLatest) {
