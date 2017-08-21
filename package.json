@@ -1,5 +1,5 @@
 {
-  "name": "multi-weex-vue-framework",
+  "name": "weex-vue-framework-packages",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,6 @@
   "license": "MIT",
   "devDependencies": {
     "semver": "^5.4.1",
-    "weex-vue-framework": "2.2.2-weex.5"
+    "weex-vue-framework": "2.4.2-weex.3"
   }
 }
