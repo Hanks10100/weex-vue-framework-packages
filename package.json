@@ -10,6 +10,6 @@
   "license": "MIT",
   "devDependencies": {
     "semver": "^5.4.1",
-    "weex-vue-framework": "2.4.2-weex.1"
+    "weex-vue-framework": "2.4.2-weex.2"
   }
 }

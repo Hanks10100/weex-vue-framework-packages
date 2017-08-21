@@ -37,18 +37,18 @@ if (!fs.existsSync(filePath)) {
 }
 
 exec([
-  `cp node_modules/weex-vue-framework/index.js ${filePath}/v${targetVersion}.js`,
-  `cp node_modules/weex-vue-framework/index.min.js ${filePath}/v${targetVersion}.min.js`,
+  `cp -r node_modules/weex-vue-framework ${filePath}/v${targetVersion}`,
+  `cp -r node_modules/weex-vue-framework ${filePath}/v${targetVersion}`,
 ])
 
-if (isLatest) {
-  exec([
-    `cp node_modules/weex-vue-framework/index.js ${filePath}/index.js`,
-    `cp node_modules/weex-vue-framework/index.min.js ${filePath}/index.min.js`,
-    `cp node_modules/weex-vue-framework/index.js index.js`,
-    `cp node_modules/weex-vue-framework/index.min.js index.min.js`
-  ])
-}
+// if (isLatest) {
+//   exec([
+//     `cp node_modules/weex-vue-framework/index.js ${filePath}/index.js`,
+//     `cp node_modules/weex-vue-framework/index.min.js ${filePath}/index.min.js`,
+//     `cp node_modules/weex-vue-framework/index.js index.js`,
+//     `cp node_modules/weex-vue-framework/index.min.js index.min.js`
+//   ])
+// }
 
 exec([
   `git add -A`,
