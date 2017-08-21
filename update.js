@@ -31,14 +31,14 @@ exec([
   `npm install weex-vue-framework@${targetVersion} -E`
 ])
 
-const filePath = `v${semver.major(targetVersion)}.${semver.minor(targetVersion)}.${semver.patch(targetVersion)}`
+const filePath = `${semver.major(targetVersion)}.${semver.minor(targetVersion)}.${semver.patch(targetVersion)}`
 if (!fs.existsSync(filePath)) {
   fs.mkdirSync(filePath)
 }
 
 exec([
-  `cp -r node_modules/weex-vue-framework/ ${filePath}/v${targetVersion}`,
-  `cp -r node_modules/weex-vue-framework/ ${filePath}/v${targetVersion}`,
+  `cp -r node_modules/weex-vue-framework/ ${filePath}/${targetVersion}`,
+  `cp -r node_modules/weex-vue-framework/ ${filePath}/${targetVersion}`,
 ])
 
 if (isLatest) {

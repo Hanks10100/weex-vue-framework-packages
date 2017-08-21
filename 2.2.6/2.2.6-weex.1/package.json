@@ -1,0 +1,48 @@
+{
+  "_from": "weex-vue-framework@2.2.6-weex.1",
+  "_id": "weex-vue-framework@2.2.6-weex.1",
+  "_inBundle": false,
+  "_integrity": "sha1-oRZXGbNgtPMVg0g6QMar6BJ9A1g=",
+  "_location": "/weex-vue-framework",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "weex-vue-framework@2.2.6-weex.1",
+    "name": "weex-vue-framework",
+    "escapedName": "weex-vue-framework",
+    "rawSpec": "2.2.6-weex.1",
+    "saveSpec": null,
+    "fetchSpec": "2.2.6-weex.1"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/weex-vue-framework/-/weex-vue-framework-2.2.6-weex.1.tgz",
+  "_shasum": "a1165719b360b4f31583483a40c6abe8127d0358",
+  "_spec": "weex-vue-framework@2.2.6-weex.1",
+  "_where": "/Users/Hanks/Codes/github/packages/multi-weex-vue-framework",
+  "author": {
+    "name": "Evan You"
+  },
+  "bugs": {
+    "url": "https://github.com/vuejs/vue/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Vue 2.0 Framework for Weex",
+  "homepage": "https://github.com/vuejs/vue/tree/dev/packages/weex-vue-framework#readme",
+  "keywords": [
+    "vue",
+    "compiler"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "weex-vue-framework",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuejs/vue.git"
+  },
+  "version": "2.2.6-weex.1"
+}
