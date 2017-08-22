@@ -1,7 +1,12 @@
 const fs = require('fs')
 const semver = require('semver')
+const jsonfile = require('jsonfile')
 const child_process = require('child_process')
-const pkg = require('./package.json')
+const versions = require('./versions.json')
+
+function isInstalled (version) {
+  return versions.some(v => semver.satisfies(version, v))
+}
 
 function exec (command) {
   const tasks = Array.isArray(command) ? command : [command]
@@ -16,13 +21,12 @@ function exec (command) {
 let targetVersion = process.argv[2]
 let isLatest = false
 
-if (!semver.valid(targetVersion)) {
+if (!targetVersion || targetVersion === 'latest') {
   targetVersion = exec(`npm view weex-vue-framework version`).trim()
   isLatest = true
 }
 
-const formerVersion = pkg.devDependencies['weex-vue-framework']
-if (formerVersion === targetVersion) {
+if (isInstalled(targetVersion)) {
   console.log(` => weex-vue-framework@${targetVersion} is already installed.`)
   process.exit()
 }
@@ -49,6 +53,10 @@ if (isLatest) {
     `cp node_modules/weex-vue-framework/factory.js factory.js`
   ])
 }
+
+versions.push(targetVersion)
+versions.sort((a, b) => semver.gt(a, b) ? 1 : -1)
+jsonfile.writeFileSync('./versions.json', versions, { spaces: 2 })
 
 exec([
   `git add -A`,
